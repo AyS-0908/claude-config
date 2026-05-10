@@ -1,0 +1,17 @@
+# Session data
+sessions/
+projects/
+shell-snapshots/
+*.jsonl
+
+# Cache & auth
+cache/
+mcp-needs-auth-cache.json
+*.log
+
+# Plugins (reinstall via marketplace)
+plugins/
+
+# Secrets / env
+*.env
+credentials.*
