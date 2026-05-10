@@ -15,3 +15,10 @@ plugins/
 # Secrets / env
 *.env
 credentials.*
+.credentials.json
+
+# Local ephemeral data
+backups/
+file-history/
+plans/
+.last-cleanup
