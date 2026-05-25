@@ -1,0 +1,19 @@
+| Section | SON FICHIER · CLAUDE.md VERBATIM | CE QUE ÇA SIGNIFIE · FRANÇAIS CLAIR |
+|---|---|---|
+| Titre | Anatomie du Boris Cherny de<br>CLAUDE.md | lis-le comme<br>mon CLAUDE.md<br><br>BORIS CHERNY |
+| Sous-titre | Son fichier réel (à gauche). | Ce que chaque ligne signifie vraiment en français clair (à droite). |
+| Onglet | CLAUDE.md × |  |
+|  | ### Orchestration du Flux de Travail |  |
+| 1 | ### 1. Mode Plan par Défaut<br>• Lancer le mode plan pour TOUTE tâche non-triviale (3+ étapes)<br>• Si quelque chose dérape, ARRÊTER et re-planifier | Il écrit le plan en premier. Empêche Claude de s'emballer dans la mauvaise direction et de brûler vos tokens. |
+| 2 | ### 2. Stratégie des Sous-Agents<br>• Utiliser des sous-agents pour garder le contexte principal propre<br>• Une tâche par sous-agent pour une exécution concentrée | Il se divise en assistants. Trois flux de recherche à la fois, votre fil principal reste concentré. |
+| 3 | ### 3. Boucle d'Auto-Amélioration<br>• Après CHAQUE correction : journaliser dans tâches/leçons.md<br>• Revoir les leçons en début de session | Chaque correction est écrite. La même erreur n'arrive jamais deux fois. |
+| 4 | ### 4. Vérification avant 'Terminé'<br>• Ne jamais marquer 'terminé' sans prouver que ça fonctionne<br>• Exécuter des tests, vérifier les logs, démontrer la correction | 'Terminé' n'est pas terminé. Claude doit prouver que le travail fonctionne avec un test, un log ou un diff. |
+| 5 | ### 5. Exiger l'Élégance (Équilibrée)<br>• Si une correction semble bricolée : implémenter la version propre<br>• Ignorer ceci pour les corrections simples et évidentes | Si ça ressemble à un hack, demandez le bon. Ignorez les micro-ajustements, la sur-ingénierie brûle des crédits. |
+| 6 | ### 6. Correction de Bugs Autonome<br>• Rapport de bug = juste corriger, pas de tutoriel<br>• Pointez vers les logs, erreurs, tests échoués, puis résolvez | Collez l'erreur, partez. Claude lit la trace, trouve la cause, répare sans votre intervention. |
+| 7 | ### 7. Plan d'Abord<br>• Écrire le plan dans tâches/todo.md avec des éléments cochables | Une to-do list en direct, cochée en temps réel. Claude l'écrit, vous approuvez, puis regardez-le cocher les éléments. |
+| 8 | ### 8. Vérifier le Plan, Suivre les Progrès<br>• Vérifier avec vous avant de commencer ; marquer les éléments au fur et à mesure | Relisez le plan avant de dire 'allez-y', puis cochez les éléments au fur et à mesure que Claude travaille. |
+| 9 | ### 9. Expliquer les Changements et Documenter les Résultats<br>• Résumé d'une ligne à chaque étape ; section de revue à la fin | Un résumé d'une ligne à chaque étape. Pas de modifications mystères, une section de revue est ajoutée à la clôture de la tâche. |
+| 10 | ### 10. Capturer les Leçons<br>• Mettre à jour tâches/leçons.md après chaque correction | Chaque leçon est journalisée pour la prochaine fois. La même erreur n'est jamais commise deux fois. |
+| 11 | ### 11. La Simplicité d'Abord<br>• Rendre chaque changement aussi simple que possible | Une correction d'une ligne bat une réécriture intelligente, à chaque fois. |
+| 12 | ### 12. Pas de Paresse<br>• Trouver les causes racines, pas de corrections temporaires | Trouvez la cause racine réelle. Pas de solutions de bricolage qui se cassent discrètement la semaine prochaine. |
+| 13 | ### 13. Impact Minimal<br>• Toucher seulement ce qui est nécessaire, éviter les nouveaux bugs | Ne refactorez pas ce qui n'a pas été demandé. Pas de réécritures surprises dans des fichiers non liés. |

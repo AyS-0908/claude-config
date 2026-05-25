@@ -14,7 +14,12 @@
       "Bash(npm --version:*)",
       "Bash(npm list:*)",
       "Bash(Get-ChildItem:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash:read-only",
+      "Glob",
+      "Grep",
+      "Read"
     ]
-  }
+  },
+  "effortLevel": "high"
 }

@@ -1,0 +1,54 @@
+Project:
+C:\Users\aymar\OneDrive\3_ PRO AYS\_IT and AI\SKILLS MGT ADDON
+
+Goal:
+Fix/clean clasp setup so AI agents can work on the Google Apps Script project. Do not create any Google Cloud project, OAuth consent screen, or OAuth client.
+
+What works:
+- Node works: C:\Program Files\nodejs\node.exe, version v24.16.0.
+- npm works: version 11.13.0.
+- clasp package is installed: version 3.3.0.
+- Direct clasp entrypoint works:
+  & "C:\Program Files\nodejs\node.exe" "C:\Users\aymar\AppData\Roaming\npm\node_modules\@google\clasp\build\src\index.js" ...
+- .clasp.json is correct:
+  scriptId = 1Rvt3g-g8biW_Pk7EogAF_2bXky4DELBgH5m1vrzTkT9h0pv1AaepxGLR
+  rootDir = "."
+- .claspignore correctly limits pushed files to root *.js and appsscript.json.
+- clasp status --json works locally and lists only intended Apps Script deployable files.
+- Repo intentionally uses root .js files as canonical source. Do not move to src/.
+
+What does not work:
+- clasp auth is not working.
+- C:\Users\aymar\.clasprc.json has no usable token.
+- show-authorized-user reports: Not logged in.
+- Google blocked the attempted clasp login flow with “Cette application est bloquée.”
+- Do not retry blocked auth flows.
+- clasp push --force must not be run until auth works and status/scriptId are verified.
+- clasp run is blocked until clasp auth and Apps Script runtime/API authorization work.
+- If auth remains blocked, smoke-test manually in the Apps Script editor / bound Sheet UI.
+
+Recent changes/mess to review:
+- Added repo file:
+  C:\Users\aymar\OneDrive\3_ PRO AYS\_IT and AI\SKILLS MGT ADDON\clasp.ps1
+  Purpose: repo-local safe wrapper. safe-status works; safe-push refuses when unauthenticated.
+- Edited:
+  AGENTS.md
+  tasks\todo.md
+  tasks\implementation-notes.md
+- Modified global npm shim:
+  C:\Users\aymar\AppData\Roaming\npm\clasp.cmd
+  It was changed to call the known-good Node path directly.
+- Backup created before that modification:
+  C:\Users\aymar\AppData\Roaming\npm\clasp.cmd.codex-backup-20260523
+- Earlier backup from prior audit:
+  C:\Users\aymar\.clasprc.json.codex-backup-20260523-091507
+- Existing audit backup folders:
+  tasks\live_appsscript_pull
+  tasks\local_before_clasp_pull
+
+Cleanup task:
+1. Inspect the files above before deleting anything.
+2. Ask before removing backups or the repo wrapper.
+3. Do not touch Apps Script source .js files unless explicitly requested.
+4. Do not create Google Cloud/OAuth resources.
+5. Produce a concise cleanup plan showing what to keep, restore, or delete.
