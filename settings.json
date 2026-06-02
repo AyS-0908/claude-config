@@ -1,6 +1,4 @@
 {
-  "autoUpdatesChannel": "latest",
-  "theme": "dark",
   "permissions": {
     "allow": [
       "Bash(git log:*)",
@@ -18,8 +16,19 @@
       "Bash:read-only",
       "Glob",
       "Grep",
-      "Read"
+      "Read",
+      "Bash(gh api *)",
+      "Bash(ls \"G:/My Drive/SKILLS/\" 2>&1)",
+      "Read(//g/My Drive/**)",
+      "Bash(ls /g/ 2>&1 | head -10; echo \"---\"; ls /mnt/g/ 2>&1 | head -10; echo \"---\"; ls \"/c/Users/aymar/\" 2>&1 | grep -i -E \"drive|gdrive\" 2>&1)",
+      "Read(//g//**)",
+      "Read(//mnt/**)"
+    ],
+    "additionalDirectories": [
+      "G:\\Mon Drive\\_ IT TOOLS\\_ PROMPTS - SKILLS\\skill-skill-creator-addon"
     ]
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "theme": "dark"
 }

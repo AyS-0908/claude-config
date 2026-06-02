@@ -21,4 +21,11 @@ credentials.*
 backups/
 file-history/
 plans/
+paste-cache/
+session-env/
+ide/
 .last-cleanup
+
+# Memory is a symlink to .ai-agents/memory (canonical)
+memory
+memory/
